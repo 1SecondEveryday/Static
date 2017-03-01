@@ -177,7 +177,7 @@ extension DataSource: UITableViewDataSource {
         return section(at: sectionIndex)?.rows.count ?? 0
     }
 
-    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    open func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let row = row(at: indexPath) {
             let tableCell = tableView.dequeueReusableCell(withIdentifier: row.cellIdentifier, for: indexPath)
 
